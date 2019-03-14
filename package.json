@@ -1,6 +1,6 @@
 {
     "name": "@wangdahoo/daemonize",
-    "version": "0.1.2",
+    "version": "1.0.0",
     "description": "daemonize a node.js application",
     "main": "lib/index.js",
     "scripts": {
