@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+const express = require('express')
+const morgan = require('morgan')
+const daemonize = require('../src')
+const app = express()
+const port = process.env.PORT || 3000
+
+app.disable('etag')
+app.disable('x-powered-by')
+
+app.use(morgan('tiny'))
+
+app.get(['/', '/ping'], (req, res) => {
+    res.end(req.path === '/' ? 'hi' : 'pong')
+})
+
+app.listen(port, async () => {
+    try {
+        await daemonize({
+            cwd: path.join(__dirname, '.')
+        })
+        console.log(`Listen on: ${port}`)
+    } catch (e) {
+        console.log(e)
+    }
+})
