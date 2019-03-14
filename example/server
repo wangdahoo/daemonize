@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 const express = require('express')
 const morgan = require('morgan')
-const daemonize = require('../src')
+const daemonize = require('../lib')
 const app = express()
 const port = process.env.PORT || 3000
 

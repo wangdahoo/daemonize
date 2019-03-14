@@ -17,9 +17,10 @@ module.exports = {
                 'refactor',
                 'perf',
                 'revert',
-                'test'
+                'test',
+                'build'
             ]
         ],
         'subject-case': [0, 'never', ['lower-case']]
     }
-};
+}

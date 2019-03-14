@@ -2,13 +2,10 @@ module.exports = {
     root: true, // 指定跟路径
     parser: 'babel-eslint',
     parserOptions: {
-        sourceType: 'module', // ECMAScript模块
         ecmaVersion: 6 // ECMAScript 版本
     },
     env: {
-        browser: true, // 浏览器启用
-        node: true, // node启用
-        es6: true // es6启用
+        node: true // node启用
     },
     extends: [
         'standard' // js标准规则

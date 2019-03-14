@@ -479,7 +479,3 @@ ASALocalRun/
 healthchecksdb
 
 # End of https://www.gitignore.io/api/node,macos,windows,visualstudio
-
-
-# Uncomment dist/ when your release your package
-dist/
